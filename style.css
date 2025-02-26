@@ -1,0 +1,43 @@
+.card {
+    width: 400px;
+    height: 650px;
+    background-color: #228B22;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+.photo {
+    height: 40%;
+    padding: 40px;
+}
+.info {
+    height: 40%;
+    padding: 7px;
+}
+img {
+    position: relative;
+    left: 15%;
+    transition: 1s;
+}
+h1 {
+    position: relative;
+    left: 23%;
+}
+.card {
+    position: relative;
+    left: 36%
+}
+.card:hover {
+    background-color: #191970;
+    height: 720px;
+    width: 450px;
+    position: relative;
+    left: 34%;
+    transition: 1s;
+
+img {
+    position: relative;
+    left: 25%;
+    transition: 1s;
+}}
+
