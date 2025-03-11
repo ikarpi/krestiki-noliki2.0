@@ -2,17 +2,25 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route('/')
-def index():
-    return render_template('index_flask.html')
+def home():
+    return render_template('home.html')
 
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
+@app.route('/about')
+def about():
+    context = {
+        "link": "Перейти по ссылке"
+    }
+    return render_template('about.html', **context)
 
-@app.route('/contacts')
-def contacts():
-    return render_template('contacts.html')
+@app.route('/about2')
+def about2():
+    context = {
+        "link": "Посмотреть новость"
+    }
+    return render_template('about.html', **context)
+
 
 if __name__ == '__main__':
     app.run()
