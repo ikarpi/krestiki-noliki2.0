@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета пользователя</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Заполните анкету</h1>
+
+        <form method="post" action="/" class="mb-4">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input id="name" type="text" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Город</label>
+                <input id="city" type="text" name="city" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hobby">Хобби</label>
+                <input id="hobby" type="text" name="hobby" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Возраст</label>
+                <input id="age" type="number" name="age" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+
+        <hr>
+
+        {% if user_data %}
+            <h2>Введенные данные:</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p><strong>Имя:</strong> {{ user_data.name }}</p>
+                    <p><strong>Город:</strong> {{ user_data.city }}</p>
+                    <p><strong>Хобби:</strong> {{ user_data.hobby }}</p>
+                    <p><strong>Возраст:</strong> {{ user_data.age }}</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
